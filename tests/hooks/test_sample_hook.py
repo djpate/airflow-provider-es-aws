@@ -17,7 +17,7 @@ import unittest
 from unittest import mock
 
 # Import Hook
-from sample_provider.hooks.sample_hook import SampleHook
+from es_aws_provider.hooks.es_aws_hook import EsAWSHook
 
 
 log = logging.getLogger(__name__)
@@ -37,7 +37,7 @@ class TestSampleHook(unittest.TestCase):
         m.post('https://www.httpbin.org/', json={'data': 'mocked response'})
 
         # Instantiate hook
-        hook = SampleHook(
+        hook = EsAWSHook(
             sample_conn_id='conn_sample',
             method='post'
         )
@@ -61,7 +61,7 @@ class TestSampleHook(unittest.TestCase):
         m.get('https://www.httpbin.org/', json={'data': 'mocked response'})
 
         # Instantiate hook
-        hook = SampleHook(
+        hook = EsAWSHook(
             sample_conn_id='conn_sample',
             method='get'
         )
