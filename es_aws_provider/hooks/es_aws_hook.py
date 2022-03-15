@@ -78,6 +78,7 @@ class EsAWSHook(ElasticsearchHook):
                 'password': 'Secret key',
                 'extra__es_aws__region': 'us-east-1',
                 'extra__es_aws__role': 'arn:aws:iam::123456789012:role/role-name',
+                'extra__es_aws__profile': 'default',
             },
         }
 
